@@ -15,7 +15,7 @@ class ColumnFullException(Exception):
 # DEFINING COLORS
 BLUE = (88,38,178)
 WHITE = (255, 255, 255)
-YL = (175, 255 , 28)
+YL = (175,  255 , 78)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
@@ -333,7 +333,7 @@ class GameMainView(object):
         """Initialize pygame, window, background, font,...
         """
         pygame.init()
-        pygame.display.set_caption("Press ESC to quit")
+        pygame.display.set_caption("Connect 4 line game")
         self.width = width
         self.height = height
         self.screen = pygame.display.set_mode((self.width, self.height), pygame.DOUBLEBUF)
@@ -379,7 +379,7 @@ class GameMainView(object):
         """
         main_menu = True
         play_game = False
-        self.background.fill(())
+        self.background.fill(YL)
         self.draw_menu()
         
         while main_menu:            
@@ -526,30 +526,32 @@ class GameMainView(object):
         """
         Draw the elements for the main menu screen
         """
-        font = pygame.font.SysFont('mono', 40, bold=True)
-        self.title_surface = font.render('CONNECT 4', True, BLACK)
-        fw, fh = font.size('CONNECT 4')
-        self.background.blit(self.title_surface, ((self.width - fw) // 2, 150))
+        font = pygame.font.SysFont('mono', 50, bold=True)
+        self.title_surface = font.render('Connect 4 in a Line ', True, BLACK)
+        fw, fh = font.size('CONNECT 4 in a Line')
+        self.background.blit(self.title_surface, ((self.width - fw) // 2, 200))
+        two_player_text = ''
         computer_player_text = 'Human vs Computer'
-        train_text = 'Train Computer'
+        train_text = ''
         quit_text = 'QUIT'
         font = pygame.font.SysFont('mono', 40, bold=True)
         
-
+        self.play_surface = font.render(two_player_text, True, BLACK)
+        fw, fh = font.size(two_player_text)
         self.rect1 = self.play_surface.get_rect(topleft=((self.width - fw) // 2, 300))
         self.background.blit(self.play_surface, ((self.width - fw) // 2, 300) )
         
         computer_play_surface = font.render(computer_player_text, True, BLACK)
         fw, fh = font.size(computer_player_text)     
         self.rect2 = computer_play_surface.get_rect(topleft=((self.width - fw) // 2, 350))
-        self.background.blit(computer_play_surface, ((self.width - fw) // 2, 350) )    
+        self.background.blit(computer_play_surface, ((self.width - fw) // 2, 350) )
         
         self.train_surface = font.render(train_text, True, BLACK)
         fw, fh = font.size(train_text)        
         self.rect3 = self.train_surface.get_rect(topleft=((self.width - fw) // 2, 400))
         self.background.blit(self.train_surface, ((self.width - fw) // 2, 400) )        
         
-        self.quit_surface = font.render(quit_text, True, BLACK)
+        self.quit_surface = font.render(quit_text, True, RED)
         fw, fh = font.size(quit_text)        
         self.rect4 = self.quit_surface.get_rect(topleft=((self.width - fw) // 2, 450))
         self.background.blit(self.quit_surface, ((self.width - fw) // 2, 450) )   
