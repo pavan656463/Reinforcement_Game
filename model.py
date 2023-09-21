@@ -22,9 +22,9 @@ GREEN = (0, 255, 0)
 LIME  = (204,255, 0 )
 BOARD_SIZE = (7,6)
 
-
+"""This class represents a single slot on the board"""
 class Slot():
-    """A class that represents a single slot on the board"""
+
     SIZE=80
     def __init__(self, row_index, col_index, width, height, x1, y1):
         """
