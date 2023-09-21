@@ -78,11 +78,10 @@ class Slot():
         pygame.draw.rect(self.surface, WHITE, (1,1,self.width - 2,self.height - 2))
         self.surface = self.surface.convert()
         background.blit(self.surface, (self.x_pos, self.y_pos))
-    
-    
+
+
+"""This class to represent the connect 4 board means(Main Board of player )"""
 class Board():
-    """A class to represent the connect 4 board"""
-    
     MARGIN_X = 300
     MARGIN_Y = 150
     
