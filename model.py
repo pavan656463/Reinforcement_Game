@@ -134,7 +134,7 @@ class Board():
     
     def draw(self, background):
         """
-        Method to draw the entire board on the screen
+        This method will draw entire board on the screen
         """
         for i in range(self.num_rows):
             for j in range(self.num_columns):
@@ -148,7 +148,7 @@ class Board():
     
     def check_column_fill(self, col_num):
         """
-        Return True iff the column col_num on the board is filled up
+        Return True if the column col_num on the board is filled up
         """
         for i in range(len(self.container)):
             # if a slot isn't filled then the column is not filled
