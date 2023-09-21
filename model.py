@@ -3,14 +3,6 @@ import random
 import argparse
 
 
-# define some global variables
-BLUE = (0, 0, 255)
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BOARD_SIZE = (7,6)
-
 class ColumnFullException(Exception):
     """An exception that will be thrown if a column of the board is full"""
     def __init__(self, value):
@@ -18,7 +10,18 @@ class ColumnFullException(Exception):
         
     def __str__(self):
         return repr(self.value)   
-    
+
+
+# DEFINING COLORS
+BLUE = (88,38,178)
+WHITE = (255, 255, 255)
+YL = (175, 255 , 28)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+LIME  = (204,255, 0 )
+BOARD_SIZE = (7,6)
+
 
 class Slot():
     """A class that represents a single slot on the board"""
@@ -71,7 +74,7 @@ class Slot():
         """
         Draws a slot on the screen
         """
-        pygame.draw.rect(self.surface, GREEN, (0, 0, self.width, self.height))
+        pygame.draw.rect(self.surface, LIME, (0, 0, self.width, self.height))
         pygame.draw.rect(self.surface, WHITE, (1,1,self.width - 2,self.height - 2))
         self.surface = self.surface.convert()
         background.blit(self.surface, (self.x_pos, self.y_pos))
@@ -323,7 +326,7 @@ class Board():
                     self.traverse(bottom_right_node, desired_value, i + 1, j + 1, visited_nodes)
         
  
-class GameView(object):
+class GameMainView(object):
     """A class that represents the displays in the game"""
 
     def __init__(self, width=640, height=400, fps=30):
@@ -376,7 +379,7 @@ class GameView(object):
         """
         main_menu = True
         play_game = False
-        self.background.fill(WHITE)
+        self.background.fill(())
         self.draw_menu()
         
         while main_menu:            
@@ -523,18 +526,16 @@ class GameView(object):
         """
         Draw the elements for the main menu screen
         """
-        font = pygame.font.SysFont('mono', 60, bold=True)
+        font = pygame.font.SysFont('mono', 40, bold=True)
         self.title_surface = font.render('CONNECT 4', True, BLACK)
         fw, fh = font.size('CONNECT 4')
         self.background.blit(self.title_surface, ((self.width - fw) // 2, 150))
-        two_player_text = '2 Player Mode'
-        computer_player_text = 'vs Computer'
+        computer_player_text = 'Human vs Computer'
         train_text = 'Train Computer'
         quit_text = 'QUIT'
         font = pygame.font.SysFont('mono', 40, bold=True)
         
-        self.play_surface = font.render(two_player_text, True, BLACK)
-        fw, fh = font.size(two_player_text)     
+
         self.rect1 = self.play_surface.get_rect(topleft=((self.width - fw) // 2, 300))
         self.background.blit(self.play_surface, ((self.width - fw) // 2, 300) )
         
@@ -989,4 +990,4 @@ if __name__ == "__main__":
     parser.add_argument('iterations', nargs='?', default=20, action="store", help="Store the number of iterations to train computer")
     args = parser.parse_args()
 
-    GameView(1200, 760).main_menu(int(args.iterations))
+    GameMainView(1200, 700).main_menu(int(args.iterations))
