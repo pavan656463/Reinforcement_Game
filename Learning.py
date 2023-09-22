@@ -1,8 +1,8 @@
 import random
 
-
+"""This class that represents a player in the game(Bot Player)"""
 class Player():
-    """A class that represents a player in the game"""
+
 
     def __init__(self, coin_type):
         """
