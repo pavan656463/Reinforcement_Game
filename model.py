@@ -900,5 +900,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('iterations', nargs='?', default=20, action="store", help="Store the number of iterations to train computer")
     args = parser.parse_args()
-
     GameMainView(1200, 700).main_menu(int(args.iterations))
