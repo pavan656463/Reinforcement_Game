@@ -26,7 +26,7 @@ come together either vertically or horizontally.<br/>
 ->argparse<br/>
 
 # Train
--> Training based on actions by user and computer**(Self learning)**<br/>
+-> Training based on actions by user and computer **(Self learning)**<br/>
 -> All Action records keeps in **Qtable** stores in q_table.txt 
 
 # Qtable 
