@@ -2,8 +2,6 @@ import random
 
 """This class that represents a player in the game(Bot Player)"""
 class Player():
-
-
     def __init__(self, coin_type):
         """
         Initialize a player with their coin type
@@ -78,9 +76,10 @@ class QLearningPlayer(Player):
 
     def learn(self, board, actions, chosen_action, game_over, game_logic):
         """
-        Determine the reward based on its current chosen action and update
-        the Q table using the reward recieved and the maximum future reward
-        based on the resulting state due to the chosen action
+        To determine the reward based on its current chosen action and update the Q table,
+        we calculate the reward received for the action taken.
+        This reward is then used to update the Q table by incorporating the maximum future reward that can be obtained based on the resulting state resulting from the chosen action.
+        This process helps the agent learn and improve its decision-making over time.
         """
         reward = 0
         if (game_over):
@@ -96,3 +95,4 @@ class QLearningPlayer(Player):
         result_state = board.get_state()
         maxqnew = max([self.getQ(result_state, a) for a in actions])
         self.q[(prev_state, chosen_action)] = prev + self.alpha * ((reward + self.gamma * maxqnew) - prev)
+        print(self.q)
