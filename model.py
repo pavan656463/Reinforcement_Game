@@ -620,13 +620,12 @@ class GameMainView(object):
         self.quit_surface = font.render(quit_text, True, (0,  0, 0))
         fw, fh = font.size(quit_text)        
         self.rect2 = self.quit_surface.get_rect(topleft=((self.width - fw) // 2, 410))
-        self.background.blit(self.quit_surface, ((self.width - fw) // 2, 410) ) 
-        
-    
+        self.background.blit(self.quit_surface, ((self.width - fw) // 2, 410) )
 
-    
+
+"""HumanPlayer class that represents a human player(normal user) in the game"""
 class HumanPlayer(Player):
-    """A class that represents a human player in the game"""
+
     
     def __init__(self, coin_type):
         """
