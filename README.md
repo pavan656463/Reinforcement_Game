@@ -27,7 +27,7 @@ come together either vertically or horizontally.<br/>
 
 # Train
 -> Training based on actions by user and computer **(Self learning)**<br/>
--> All Action records keeps in **Qtable** stores in q_table.txt 
+-> All Action records keeps in **Qtable** stored in q_table.txt 
 
 # Qtable 
 -> Qtable records every actions of previous game<br/>
