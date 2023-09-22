@@ -21,7 +21,7 @@ come together either vertically or horizontally.<br/>
 ->Later the trained model will be deployed.<br/>
 
 # Train
--> Training based on actions by user and computer**(Self learning)**
+-> Training based on actions by user and computer**(Self learning)**<br/>
 -> All Action records keeps in **Qtable** stores in q_table.txt 
 
 # Qtable 
