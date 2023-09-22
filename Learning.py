@@ -107,8 +107,7 @@ class QLearningPlayer(Player):
         we calculate the reward received for the action taken.
         This reward is then used to update the Q table by incorporating the maximum future reward that can be obtained based on the resulting state resulting from the chosen action.
         This process helps the agent learn and improve its decision-making over time.
-
-        If q_table_file is provided, it loads the Q-table from the file before learning.
+        q_table_file is provided, it loads the Q-table from the file before learning.
         """
 
         if q_table_file:

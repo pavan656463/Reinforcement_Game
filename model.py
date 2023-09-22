@@ -586,7 +586,6 @@ class GameMainView(object):
             
         if not main_menu:
             pygame.quit()
-            
         else:
             self.main_menu()        
         
