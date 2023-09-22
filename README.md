@@ -11,4 +11,5 @@ Model Training:,<br/>
 come together either vertically or horizontally.<br/>
 ->Initially the computer and the human will be played randomly.<br/>
 ->Then the actions will be recorded by the model in the Q-Table.<br/> 
-->
+->Then the model will play according to the best actions recorded in Q-table.<br/>
+->Later the trained model will be deployed.<br/>
