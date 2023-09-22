@@ -531,7 +531,7 @@ class GameMainView(object):
         self.background.blit(self.title_surface, ((self.width - fw) // 2, 200))
         two_player_text = ''
         computer_player_text = 'Human vs Computer'
-        train_text = ''
+        train_text = 'train'
         quit_text = 'QUIT'
         font = pygame.font.SysFont('mono', 40, bold=True)
         
