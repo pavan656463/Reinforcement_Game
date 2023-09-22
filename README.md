@@ -20,6 +20,11 @@ come together either vertically or horizontally.<br/>
 ->Then the model will play according to the best actions recorded in Q-table.<br/>
 ->Later the trained model will be deployed.<br/>
 
+# Libraries
+->Pygame == '2.5.2'
+->Random 
+->argparse
+
 # Train
 -> Training based on actions by user and computer**(Self learning)**<br/>
 -> All Action records keeps in **Qtable** stores in q_table.txt 
