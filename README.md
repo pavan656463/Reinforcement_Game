@@ -20,11 +20,12 @@ come together either vertically or horizontally.<br/>
 ->Then the model will play according to the best actions recorded in Q-table.<br/>
 ->Later the trained model will be deployed.<br/>
 
+# Train
+-> Training based on actions by user and computer**(Self learning)**
+-> All Action records keeps in **Qtable** stores in q_table.txt 
+
 # Qtable 
 -> Qtable records every actions of previous game<br/>
 -> Which helps to make next decision <br/>
 -> All records are store **q_table.txt**<br/>
-
-# Train
--> Training based on actions by user and computer**(Self learning)**
 
