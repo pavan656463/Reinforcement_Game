@@ -21,9 +21,9 @@ come together either vertically or horizontally.<br/>
 ->Later the trained model will be deployed.<br/>
 
 # Libraries
-->Pygame == '2.5.2'
-->Random 
-->argparse
+->**Pygame == '2.5.2'**<br/>
+->Random <br/>
+->argparse<br/>
 
 # Train
 -> Training based on actions by user and computer**(Self learning)**<br/>
