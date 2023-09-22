@@ -1,6 +1,6 @@
 # Reinforcement_Game
-# We have Model.py as the runnable file
-# Learning.py file is containing the learning model for the given game
+We have Model.py as the runnable file
+Learning.py file is containing the learning model for the given game
 # We have used Model free learning i.e, Q-LEARNING model for training
 Initially we have to import required libraries<br/>
 -->Pygame:This library includes modules for playing sound, drawing graphics, handling mouse inputs,<br/>
