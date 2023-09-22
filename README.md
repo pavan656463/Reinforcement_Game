@@ -4,7 +4,7 @@ Learning.py file is containing the learning model for the given game
 # Applied Model free learning i.e, Q-LEARNING model for training
 
 # Guide
-There are 2 options provided Human vs Computer and Train<br/>
+There are 2 options provided Human vs Computer and Quit<br/>
 To exit game please use Esc(button) or Quit <br/>
 
 # Algorithm
