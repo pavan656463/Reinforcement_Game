@@ -26,7 +26,5 @@ come together either vertically or horizontally.<br/>
 -> All records are store **q_table.txt**<br/>
 
 # Train
-Mainly training is done in Q learning <br/>
-there will be Player 1 and Player 2, both players will Bots(Computer) based on **it will train itself(self-learning)**<br/>
-To exit Train please use Esc 
+-> Training based on actions by user and computer**(Self learning)**
 
