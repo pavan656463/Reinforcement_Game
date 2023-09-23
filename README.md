@@ -34,3 +34,5 @@ come together either vertically or horizontally.<br/>
 -> Which helps to make next decision <br/>
 -> All records are store **q_table.txt**<br/>
 
+# Run
+-> To run python model.py (It runnable file)
