@@ -11,7 +11,6 @@ class ColumnFullException(Exception):
     def __str__(self):
         return repr(self.value)   
 
-
 # DEFINING COLORS
 BLUE = (88,38,178)
 WHITE = (255, 255, 255)
