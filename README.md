@@ -1,4 +1,4 @@
-# Reinforcement_Game
+# Reinforcement_Game(Connecting 4 dot in a line )
 Model.py is the runnable file<br/>
 Learning.py file is containing the learning model for the given game
 # Applied Model free learning i.e, Q-LEARNING model for training
